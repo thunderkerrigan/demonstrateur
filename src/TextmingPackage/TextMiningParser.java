@@ -49,8 +49,9 @@ public class TextMiningParser {
     private boolean containsSkills(String s){
         for (int i = 0; i < skillsArray.length; i++) {
             if (s.contains(skillsArray[i])) {
-                wordsMap.
+//                wordsMap.
             }
         }
-    };
+        return false;
+    }
 }

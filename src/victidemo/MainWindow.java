@@ -100,10 +100,10 @@ public class MainWindow extends javax.swing.JPanel {
             resultFrame.add(wc);
             resultFrame.pack();
             resultFrame.setVisible(true);
-            while (tmp.) {
-                Object nextElement = tmp.nextElement();
+//            while (tmp.) {
+//                Object nextElement = tmp.nextElement();
                 
-            }
+//            }
        }
                 
                 
