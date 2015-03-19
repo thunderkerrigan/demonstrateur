@@ -38,7 +38,7 @@ public class TextMiningParser {
             Scanner scanner = new Scanner(f);
             
             while (scanner.hasNextLine()) {
-                this
+//                this
             }
             scanner.close();
         } catch (FileNotFoundException e) {
