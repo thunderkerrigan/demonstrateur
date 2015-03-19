@@ -1,0 +1,44 @@
+﻿Produits & Services :	iOS, OS X 10.10 Yosemite, OS X v10.9 Mavericks
+Standards & Methodes :	Agile, Pair programming, Project Wall, Scrum
+Technologies, Logiciels & Outils : iOS, Adobe Photoshop, Autlolayout, AVFoundation, BlueFire SDK, CoreAnimation, Coredata, CoreLocation, FFMPEG, Git, Instruments, iOS SDK 4, iOS SDK 5, iOS SDK 6, iOS SDK 7, iOS SDK 8, Objective C, SourceTree, StoreKit, Storyboard, Subversion, Subversion 1.6, UIGestureRecognizers, UISegue, XCode, XCode 6.1, XMPP
+
+
+Home by SFR (application de domotique)  
+•	Refonte du design de l’application pour iOS 7 et 8.
+•	implémentation de UICollectionView.
+•	 Passage en autolayout. 
+•	Passage en ARC.
+•	 Ajout de contrôle d’appareil par protocole XMPP.
+•	Localisation française et allemande de l'application.
+SFR Mail (client Mail)
+•	Refonte de la liste des mails et ergonomie générale.
+•	implémentation d'autolayout
+•	passage en ARC
+
+
+Archambault Mes Livres :  
+•	passage au Storyboard
+•	customisation de UISegues
+•	utilisation des divers UIGestureRecognizers sur la vue de lecture (contrôle du zoom, changement de page, selection de texte, etc…)
+•	 réalisation des différents écrans de la librairie et des options utilisateurs.
+•	Gestion des diverse résolution et taille d’écran : iPad, iPhone et iPhone 5.
+
+Archambault Mes Livres - Refonte de l’application existante : passage au Storyboard, customisation de UISegues, utilisation des divers UIGestureRecognizers sur la vue de lecture (contrôle du zoom, changement de page, selection de texte, etc…), réalisation des différents écrans de la librairie et des options utilisateurs. Gestion des diverse résolution et taille d’écran : iPad, iPhone et iPhone 5.
+My Clubbing Store - Réalisation d’un player de musique avec fonctionnement en tache de fond. Animation avec utilisation de CoreAnimation. Réalisation de l’interface marchande en InApp purchase (storeKit).
+Foot Mercato - Réalisation des écrans de news, flash info et de la vue Mon FM : Vue à tiroirs multiples et sélection d‘items multiples. Peuplement des TableView par WebServices au format Property List.
+SFR Mail - Refonte de la liste des mails et ergonomie générale.
+Home By SFR - Refonte du design de l’application pour iOS 7. Passage en autolayout. Passage en ARC. Ajout de contrôle d’appareil par protocole XMPP.
+Localisation française et allemande de l'application.
+Baobab (absente de l'App Store) - réalisation de la partie géolocalisation des artisans et commerces en fonction de la proximité du device de l’utilisateur (CoreLocation). Réalisation des écrans des commerçant et des particuliers. Les diverses vues étaient alimentés par des WebService au format JSON.
+
+Foot Mercato   
+•	Réalisation des écrans de news, flash info
+•	vue Mon FM : Vue à tiroirs multiples et sélection d‘items multiples.
+•	Peuplement des TableView par WebServices au format Property List.
+My Clubbing Store
+•	Réalisation d’un player de musique avec fonctionnement en tache de fond.
+•	 Animation avec utilisation de CoreAnimation.
+•	 Réalisation de l’interface marchande en InApp purchase (storeKit).
+
+2012	Msc / Master / DEA / DESS  - Developpeur, Supinfo (Lyon/Montréal - France)
+2009	BTS / DUT - Developpeur, Institution des Chartreux (Lyon - France)

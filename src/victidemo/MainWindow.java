@@ -5,7 +5,12 @@
  */
 package victidemo;
 
+import com.sun.javafx.tk.FileChooserType;
+import java.io.FileFilter;
+import javafx.stage.FileChooser;
 import javax.swing.JFileChooser;
+import TextmingPackage.TextMiningParser;
+import javax.swing.JFrame;
 
 /**
  *
@@ -20,6 +25,9 @@ public class MainWindow extends javax.swing.JPanel {
     public MainWindow() {
         initComponents();
         fc = new JFileChooser();
+        fc.setAcceptAllFileFilterUsed(false);
+        TextFileFilter ff = new TextFileFilter();
+        fc.setFileFilter(ff);
     }
 
     /**
@@ -35,14 +43,14 @@ public class MainWindow extends javax.swing.JPanel {
         openButton = new javax.swing.JButton();
         titleLabel = new javax.swing.JLabel();
 
-        filenameTextfield.setText("Random files");
+        filenameTextfield.setText("file name");
         filenameTextfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 filenameTextfieldActionPerformed(evt);
             }
         });
 
-        openButton.setText("Valider");
+        openButton.setText("importer");
         openButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 openButtonActionPerformed(evt);
@@ -82,10 +90,21 @@ public class MainWindow extends javax.swing.JPanel {
 
     private void openButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openButtonActionPerformed
         // TODO add your handling code here:
-        int returnVal = fc.showDialog(this, TOOL_TIP_TEXT_KEY);
+        int returnVal = fc.showDialog(this, "choisir Fichier");
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            filenameTextfield.setText(fc.getName());
-        }
+            filenameTextfield.setText(fc.getSelectedFile().getName());
+            TextMiningParser tmp = new TextMiningParser();
+            tmp.startHashingTextFile(fc.getSelectedFile()); 
+            WordCloud wc = new WordCloud();
+            JFrame resultFrame = new JFrame("résultat");
+            resultFrame.add(wc);
+            resultFrame.pack();
+            resultFrame.setVisible(true);
+            while (tmp.) {
+                Object nextElement = tmp.nextElement();
+                
+            }
+       }
                 
                 
                 
@@ -103,4 +122,8 @@ public class MainWindow extends javax.swing.JPanel {
     private javax.swing.JButton openButton;
     private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables
+
+    private javax.swing.filechooser.FileFilter TextFileFilter() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
