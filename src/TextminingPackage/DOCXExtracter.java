@@ -32,7 +32,7 @@ This software recieves a docx file from the command line, and returns the text
 from its path.
 
 **/
-package TextmingPackage;
+package TextminingPackage;
 
 import java.io.IOException;
 import java.io.InputStream;

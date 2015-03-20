@@ -5,11 +5,33 @@
  */
 package victidemo;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 /**
  *
  * @author Thunderkerrigan
  */
 public class WordCloud extends javax.swing.JPanel {
+
+    public JScrollPane getContentScrollPanel() {
+        return contentScrollPanel;
+    }
+
+    public JButton getWordsCloudButton() {
+        return WordsCloudButton;
+    }
+
+    public JButton getSemanticButton() {
+        return semanticButton;
+    }
+
+    public JTextArea getWordCloudTextField() {
+        return wordCloudTextField;
+    }
+
 
     /**
      * Creates new form WordCloud
@@ -27,28 +49,63 @@ public class WordCloud extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        contentLabel = new javax.swing.JLabel();
+        contentScrollPanel = new javax.swing.JScrollPane();
+        wordCloudTextField = new javax.swing.JTextArea();
+        WordsCloudButton = new javax.swing.JButton();
+        semanticButton = new javax.swing.JButton();
+
+        wordCloudTextField.setColumns(20);
+        wordCloudTextField.setRows(5);
+        contentScrollPanel.setViewportView(wordCloudTextField);
+
+        WordsCloudButton.setText("Nuage de mot clé");
+
+        semanticButton.setText("Graphe semantique");
+        semanticButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                semanticButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(contentLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE)
+                .addGap(143, 143, 143)
+                .addComponent(contentScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(semanticButton)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(WordsCloudButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(contentLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
+                .addComponent(contentScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(WordsCloudButton)
+                .addGap(18, 18, 18)
+                .addComponent(semanticButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void semanticButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_semanticButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_semanticButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel contentLabel;
+    private javax.swing.JButton WordsCloudButton;
+    private javax.swing.JScrollPane contentScrollPanel;
+    private javax.swing.JButton semanticButton;
+    private javax.swing.JTextArea wordCloudTextField;
     // End of variables declaration//GEN-END:variables
 }

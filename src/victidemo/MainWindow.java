@@ -9,8 +9,15 @@ import com.sun.javafx.tk.FileChooserType;
 import java.io.FileFilter;
 import javafx.stage.FileChooser;
 import javax.swing.JFileChooser;
-import TextmingPackage.TextMiningParser;
+import TextminingPackage.TextMiningParser;
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import GraphicsElements.WordCloudContainer;
+import java.awt.Rectangle;
 
 /**
  *
@@ -99,17 +106,24 @@ public class MainWindow extends javax.swing.JPanel {
             JFrame resultFrame = new JFrame("résultat");
             resultFrame.add(wc);
             resultFrame.pack();
+            System.out.println("will display");
             resultFrame.setVisible(true);
-//            while (tmp.) {
-//                Object nextElement = tmp.nextElement();
-                
-//            }
-       }
-                
-                
-                
-                
-                
+            wc.getWordCloudTextField().setText(tmp.getContentOfOfile());
+            wc.getWordsCloudButton().addActionListener(new ActionListener() { 
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    JFrame resultPanel = new JFrame();
+                    resultPanel.setBounds(new Rectangle(0, 0, 1000, 600));
+                    tmp.GetWordCloud().stream().forEach((wcc) -> {
+                        System.out.println("x:"+wcc.getBounds().getX());
+                        System.out.println("y:"+wcc.getBounds().getY());
+                        resultPanel.add(wcc);
+                        
+                    });
+                    resultPanel.setVisible(true);
+                }
+            } );
+        }       
     }//GEN-LAST:event_openButtonActionPerformed
 
     private void filenameTextfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filenameTextfieldActionPerformed
