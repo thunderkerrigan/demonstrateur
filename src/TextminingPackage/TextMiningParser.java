@@ -28,23 +28,37 @@ public class TextMiningParser {
     String[] skillsArray;
     String[] jobsArray;
     String[] SchoolsArray;
+    String[] namesArray;
     
     HashMap<String, ArrayList<String>> wordsMap;
 
+    /**
+     *
+     * @return
+     */
     public String getContentOfOfile() {
         return contentOfOfile;
     }
     
+    /**
+     *
+     */
     public TextMiningParser(){
         skillsArray = new String[]{"java", "objective-c", "uml", "microsoft", "sql", "ios", "coredata", "c"};
         jobsArray = new String[]{"apple", "sfr", "readbooks", "altran"};
         SchoolsArray = new String[]{"supinfo", "chartreux", "bts" };
+        namesArray = new String[]{"Joseph", "Pasqualini"};
         wordsMap = new HashMap<>();
         wordsMap.put("schools", new ArrayList<>());
         wordsMap.put("jobs", new ArrayList<>());
         wordsMap.put("skills", new ArrayList<>());
+        wordsMap.put("names", new ArrayList<>());
     }
     
+    /**
+     *
+     * @param f
+     */
     public void startHashingTextFile(File f){
         
         try {
@@ -60,6 +74,7 @@ public class TextMiningParser {
                 this.containsJobs(line);
                 this.containsSkills(line);
                 this.containsSchools(line);
+                this.containsNames(line);
                 System.out.println("next line is :"+scanner.nextLine());
             }
             scanner.close();
@@ -116,6 +131,26 @@ public class TextMiningParser {
         return didcontainsJobs;
     }
     
+    private boolean containsNames(String s){
+        System.out.println("string to match:"+s);
+        ArrayList<String> names = wordsMap.get("names");
+        Boolean didcontainsJobs = false;
+        for (String name : namesArray) {
+            System.out.println("try to match: " + name);
+            if (!names.contains(name) && s.matches("(?i:.*" + name + ".*)")) {
+                System.out.println("success match!!!");
+                names.add(name);
+                didcontainsJobs = true;
+            }
+        }
+        wordsMap.replace("names", names);
+        return didcontainsJobs;
+    }
+    
+    /**
+     *
+     * @return
+     */
     public List<WordCloudContainer> GetWordCloud(){
         List<WordCloudContainer> wordCloud = new ArrayList<>();
         wordsMap.entrySet().stream().forEach((entrySet) -> {

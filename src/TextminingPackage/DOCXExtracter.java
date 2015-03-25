@@ -40,6 +40,10 @@ import java.util.Scanner;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
+/**
+ *
+ * @author jpasqualini
+ */
 public class DOCXExtracter {
     private static String convertStreamToString(java.io.InputStream is) {
         try(Scanner s = new java.util.Scanner(is).useDelimiter("\\A")) {
@@ -47,6 +51,12 @@ public class DOCXExtracter {
         }
     }
 
+    /**
+     *
+     * @param path
+     * @return
+     * @throws IOException
+     */
     public static String extractFromPath(String path) throws IOException
     {
         ZipFile zipFile = new ZipFile(path);
@@ -55,6 +65,12 @@ public class DOCXExtracter {
         return ret;
     }
 
+    /**
+     *
+     * @param f
+     * @return
+     * @throws IOException
+     */
     public static String extractFromFile(ZipFile f) throws IOException
     {
         ZipEntry e = f.getEntry("word/document.xml");
@@ -64,6 +80,10 @@ public class DOCXExtracter {
         return contents.replaceAll("(?s)\\<.*?\\>", " ");
     }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args)
     {
         for(int i = 0; i < args.length; i++)

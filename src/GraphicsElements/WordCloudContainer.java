@@ -22,9 +22,9 @@ public class WordCloudContainer extends javax.swing.JPanel {
         initComponents();
         this.setBackground(c);
         this.nameComponentLabel.setText(s);
-        this.setLayout(null);
-        this.nameComponentLabel.setLayout(null);
-        this.nameComponentLabel.setBounds(this.getVisibleRect());
+//        this.setLayout(null);
+//        this.nameComponentLabel.setLayout(null);
+//        this.nameComponentLabel.setBounds(this.getVisibleRect());
     }
 
     /**
@@ -44,6 +44,7 @@ public class WordCloudContainer extends javax.swing.JPanel {
         nameComponentLabel.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         nameComponentLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nameComponentLabel.setText("Element");
+        nameComponentLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, java.awt.Color.darkGray));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

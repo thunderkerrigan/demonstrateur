@@ -17,7 +17,10 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import GraphicsElements.WordCloudContainer;
+import java.awt.GridLayout;
 import java.awt.Rectangle;
+import java.io.File;
+import javax.swing.filechooser.FileSystemView;
 
 /**
  *
@@ -35,6 +38,7 @@ public class MainWindow extends javax.swing.JPanel {
         fc.setAcceptAllFileFilterUsed(false);
         TextFileFilter ff = new TextFileFilter();
         fc.setFileFilter(ff);
+        fc.setCurrentDirectory(new File(System.getProperty("user.home")+"\\Documents\\NetBeansProjects\\VictiDemo\\docs"));
     }
 
     /**
@@ -112,15 +116,19 @@ public class MainWindow extends javax.swing.JPanel {
             wc.getWordsCloudButton().addActionListener(new ActionListener() { 
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    JFrame resultPanel = new JFrame();
-                    resultPanel.setBounds(new Rectangle(0, 0, 1000, 600));
+                    JFrame resultFrame = new JFrame();
+                    resultFrame.setLayout(new GridLayout(0, 4));
                     tmp.GetWordCloud().stream().forEach((wcc) -> {
+                        System.out.println("///////////////////////////");
                         System.out.println("x:"+wcc.getBounds().getX());
                         System.out.println("y:"+wcc.getBounds().getY());
-                        resultPanel.add(wcc);
+                        System.out.println("width:"+wcc.getBounds().getWidth());
+                        System.out.println("height:"+wcc.getBounds().getHeight());
+                        resultFrame.add(wcc);
                         
                     });
-                    resultPanel.setVisible(true);
+                    resultFrame.pack();
+                    resultFrame.setVisible(true);
                 }
             } );
         }       

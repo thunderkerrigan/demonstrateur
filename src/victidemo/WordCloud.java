@@ -16,18 +16,34 @@ import javax.swing.JTextArea;
  */
 public class WordCloud extends javax.swing.JPanel {
 
+    /**
+     *
+     * @return
+     */
     public JScrollPane getContentScrollPanel() {
         return contentScrollPanel;
     }
 
+    /**
+     *
+     * @return
+     */
     public JButton getWordsCloudButton() {
         return WordsCloudButton;
     }
 
+    /**
+     *
+     * @return
+     */
     public JButton getSemanticButton() {
         return semanticButton;
     }
 
+    /**
+     *
+     * @return
+     */
     public JTextArea getWordCloudTextField() {
         return wordCloudTextField;
     }

@@ -1,4 +1,6 @@
-﻿Produits & Services :	iOS, OS X 10.10 Yosemite, OS X v10.9 Mavericks
+﻿Joseph Pasqualini
+
+Produits & Services :	iOS, OS X 10.10 Yosemite, OS X v10.9 Mavericks
 Standards & Methodes :	Agile, Pair programming, Project Wall, Scrum
 Technologies, Logiciels & Outils : iOS, Adobe Photoshop, Autlolayout, AVFoundation, BlueFire SDK, CoreAnimation, Coredata, CoreLocation, FFMPEG, Git, Instruments, iOS SDK 4, iOS SDK 5, iOS SDK 6, iOS SDK 7, iOS SDK 8, Objective C, SourceTree, StoreKit, Storyboard, Subversion, Subversion 1.6, UIGestureRecognizers, UISegue, XCode, XCode 6.1, XMPP
 
