@@ -106,7 +106,7 @@ public class MainWindow extends javax.swing.JPanel {
             filenameTextfield.setText(fc.getSelectedFile().getName());
             TextMiningParser tmp = new TextMiningParser();
             tmp.startHashingTextFile(fc.getSelectedFile()); 
-            WordCloud wc = new WordCloud();
+            MainMenu wc = new MainMenu();
             JFrame resultFrame = new JFrame("résultat");
             resultFrame.add(wc);
             resultFrame.pack();

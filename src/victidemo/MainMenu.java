@@ -14,7 +14,7 @@ import javax.swing.JTextArea;
  *
  * @author Thunderkerrigan
  */
-public class WordCloud extends javax.swing.JPanel {
+public class MainMenu extends javax.swing.JPanel {
 
     /**
      *
@@ -52,7 +52,7 @@ public class WordCloud extends javax.swing.JPanel {
     /**
      * Creates new form WordCloud
      */
-    public WordCloud() {
+    public MainMenu() {
         initComponents();
     }
 
